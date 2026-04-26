@@ -10,11 +10,24 @@ A full-stack Enterprise CRM application built with the MERN stack (MongoDB, Expr
 
 ---
 
-## 🚀 Quick Start
+## 🌐 Live Demo (Production)
+
+The application is currently deployed and fully operational in a production environment. 
+- **Frontend:** Hosted on **Vercel**
+- **Backend:** Node.js server hosted on **Vercel** / Cloud provider
+- **Database:** **MongoDB Atlas** (Cloud Database)
+
+Since the database is deployed on MongoDB Atlas, all data (users, leads, activities) is stored in the cloud and synced in real-time. 
+
+---
+
+## 🚀 Local Development (Quick Start)
+
+If you want to run the application locally on your machine, follow these steps.
 
 ### Prerequisites
 - Node.js v18+
-- MongoDB (running locally on port 27017)
+- MongoDB (running locally on port 27017) or MongoDB Atlas URI
 - npm
 
 ### 1. Clone & Install
@@ -31,7 +44,7 @@ npm install
 
 ### 2. Configure Environment
 
-The backend `.env` is already configured:
+Create or update the `.env` file in the `backend` directory. For a local MongoDB instance:
 
 ```env
 PORT=5000
@@ -40,9 +53,11 @@ MONGO_URI=mongodb://127.0.0.1:27017/crm_db
 NODE_ENV=development
 ```
 
-### 3. 🌱 Seed the MongoDB Database (IMPORTANT)
+*(Note: If you want to connect your local app to the live database, replace `MONGO_URI` with your MongoDB Atlas connection string).*
 
-Run this command to populate the database with **3 test users** and **10 sample leads**:
+### 3. 🌱 Seed the Database (IMPORTANT)
+
+Run this command to populate the database with **test users** and **sample leads**:
 
 ```bash
 cd backend

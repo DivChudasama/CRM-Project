@@ -90,11 +90,7 @@ const LoginPage = () => {
             </button>
           </form>
           
-          <div className="mt-8 pt-8 border-t border-slate-100">
-            <p className="text-center text-xs text-slate-400">
-              Demo use: admin@example.com / 123456
-            </p>
-          </div>
+
         </div>
       </div>
     </div>
