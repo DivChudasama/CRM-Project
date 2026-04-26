@@ -11,8 +11,8 @@ const connectToDB = async () => {
     console.log('✅ [DATABASE] Connected to MongoDB: ' + conn.connection.name);
   } catch (err) {
     console.error(`\n❌ DATABASE CONNECTION ERROR: ${err.message}`);
-    console.log('Ensure MongoDB service is running at: mongodb://127.0.0.1:27017/');
-    process.exit(1);
+    console.log('Ensure MongoDB service is running or IP is whitelisted.');
+    throw err;
   }
 };
 
