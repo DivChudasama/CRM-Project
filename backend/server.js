@@ -22,6 +22,21 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cors());
 
 // ============================================================
+// Home Route (Added for Health Check)
+// ============================================================
+app.get('/', (req, res) => {
+  res.status(200).send(`
+    <div style="font-family: sans-serif; text-align: center; padding: 50px;">
+      <h1 style="color: #10b981;">🚀 CRM Backend is Live!</h1>
+      <p>The Enterprise CRM API server is running successfully.</p>
+      <p>Mode: <b>${process.env.NODE_ENV || 'development'}</b></p>
+      <hr style="width: 200px; margin: 20px auto;">
+      <p style="font-size: 0.8rem; color: #6b7280;">Deployed by Divyesh Chudasama</p>
+    </div>
+  `);
+});
+
+// ============================================================
 // Mount API Routers
 // ============================================================
 app.use('/api/v1/auth', authRoutes);
